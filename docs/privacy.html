@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UAssist Transcript — Privacyverklaring</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+      color: #1e293b;
+      line-height: 1.65;
+    }
+    h1 { color: #004A80; margin-bottom: 6px; }
+    h2 { color: #0f172a; margin-top: 28px; font-size: 18px; }
+    .muted { color: #64748b; font-size: 14px; margin-bottom: 24px; }
+    code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+    a { color: #004A80; }
+  </style>
+</head>
+<body>
+  <h1>UAssist Transcript — Privacyverklaring</h1>
+  <div class="muted">Laatst bijgewerkt: november 2026 &middot; <a href="terms.html">Gebruiksvoorwaarden</a> &middot; <a href="en/privacy.html">English</a></div>
+
+  <p>
+    UAssist Transcript is een onafhankelijke productiviteitstool om teksttranscripties (<code>.pdf</code>) te genereren uit webvideo's, streams en audiobestanden.
+    Wij verwerken uitsluitend de minimale gegevens die strikt noodzakelijk zijn om de transcriptie- en tegoedfuncties te leveren.
+  </p>
+
+  <h2>1. Gegevens die wij verwerken</h2>
+  <ul>
+    <li><strong>Videostreams &amp; titels:</strong> Worden lokaal in je browser herkend zodra je een ondersteunde video afspeelt op een pagina en ervoor kiest deze te transcriberen. Het adres van de webpagina, je inloggegevens en je cookies worden nooit naar onze servers gestuurd.</li>
+    <li><strong>Lokale opslag &amp; Account-ID:</strong> Je taalvoorkeur, instellingen en een automatisch aangemaakte anonieme accountsleutel worden lokaal in <code>chrome.storage</code> op je toestel bewaard om je tegoed en lopende opdrachten bij te houden. In gegenereerde <code>.pdf</code>-transcripties wordt de korte prefix van je Account-ID (en indien vrijwillig gekoppeld je e-mailadres) als zichtbaar en technisch watermerk opgenomen tegen ongeoorloofde verspreiding.</li>
+    <li><strong>Optioneel e-mailadres:</strong> Als je in de extensie vrijwillig een e-mailadres koppelt (via een eenmalige verificatiecode), wordt dit uitsluitend gebruikt zodat je je tegoed op een ander toestel kunt herstellen en bevestigingen ontvangt wanneer je bestelling of transcriptie klaar is. Je kunt je gekoppelde e-mailadres op elk moment met één klik verwijderen in de extensie.</li>
+    <li><strong>Betalingen &amp; Tegoed (via Mollie):</strong> Wanneer je tegoed opwaardeert of direct voor een transcriptie betaalt, verloopt de betaling via Mollie (<code>mollie.com</code>) en onze backend API (<code>workers.dev</code>). Wij ontvangen of bewaren nooit kaartnummers of bankgegevens — alleen het bedrag, de status en de betaalreferentie.</li>
+    <li><strong>Snelle service (Cloud):</strong> Alleen wanneer je kiest voor Snelle service haalt je browser de audiostukken op (of stript lokaal het geluid uit een gekozen <code>.mp4</code>-bestand) en stuurt alleen de audio naar onze serverless transcriptie-backend (<code>modal.run</code>, aangestuurd via <code>workers.dev</code>) om je transcriptie te maken. Elk audiostuk wordt direct verwijderd zodra het in tekst is omgezet. De resulterende tekst blijft <strong>7 dagen</strong> beschikbaar zodat je je <code>.pdf</code> kunt downloaden (en kan op elk moment eerder door jou worden gewist in de extensie).</li>
+    <li><strong>In browser (Lokaal):</strong> Audio van streams of lokale bestanden wordt rechtstreeks in je eigen browser gedecodeerd en uitgeschreven met WebAssembly zonder dat de audio je toestel verlaat. Het spraakmodel wordt eenmalig opgehaald via Hugging Face CDN en lokaal gecachet.</li>
+    <li><strong>Contact &amp; Supportformulier:</strong> Wanneer je een bericht stuurt via <em>Contact / Probleem melden</em> in de extensie, worden je e-mailadres, optionele bestelnummer en bericht naar onze backend gestuurd om je vraag te beantwoorden.</li>
+  </ul>
+
+  <h2>2. Verwerkers &amp; Bewaartermijnen</h2>
+  <ul>
+    <li><strong>Technische dienstverleners:</strong> Voor de werking van de dienst maken wij gebruik van <strong>Cloudflare</strong> (API &amp; database), <strong>Modal</strong> (serverless GPU-verwerking voor Snelle service), <strong>Mollie</strong> (betalingsverwerking in Nederland/EU) en <strong>Hugging Face</strong> (download van het lokale browser-spraakmodel). Doorgifte buiten de EER gebeurt onder het EU-US Data Privacy Framework of de standaardcontractbepalingen (SCC's) van de Europese Commissie.</li>
+    <li><strong>Bewaartermijnen:</strong> Tijdelijke audiostukken bij Snelle service worden direct na transcriptie gewist. Uitgeschreven cloud-teksten worden na <strong>7 dagen</strong> automatisch gewist. Inactieve anonieme accounts zonder tegoed of gekoppeld e-mailadres worden na 30 dagen verwijderd. Transactie- en betalingsreferenties worden conform de Belgische fiscale wetgeving 10 jaar bewaard voor de boekhouding.</li>
+  </ul>
+
+  <h2>3. Wat wij niet doen</h2>
+  <ul>
+    <li>Wij verkopen, verhuren of verhandelen <strong>geen</strong> gebruikersgegevens aan derden.</li>
+    <li>Wij verzamelen <strong>geen</strong> wachtwoorden, cookies, browsegeschiedenis of advertentie-ID's.</li>
+    <li>Wij gebruiken jouw audio of transcripties <strong>nooit</strong> om AI-modellen te trainen of voor reclamedoeleinden.</li>
+  </ul>
+
+  <h2>4. Jouw AVG-rechten &amp; Contact</h2>
+  <p>
+    Onder de AVG (GDPR) heb je recht op inzage, correctie, verwijdering, beperking en overdraagbaarheid van je gegevens, evenals het recht om bezwaar te maken. Je kunt je opgeslagen transcripties en je gekoppelde e-mailadres op elk moment direct zelf wissen in de extensie onder <strong>Account</strong>.
+  </p>
+  <p>
+    Voor vragen over privacy of het uitoefenen van je rechten (vermeld daarbij je Accountnummer uit de extensie) kun je mailen naar <a href="mailto:transcriptly.info@gmail.com">transcriptly.info@gmail.com</a>, het contactformulier in de extensie gebruiken, of een issue openen op <a href="https://github.com/TRNSCRPT/UASSIST-Public">github.com/TRNSCRPT/UASSIST-Public</a>. Daarnaast heb je altijd het recht om een klacht in te dienen bij de Belgische <a href="https://www.gegevensbeschermingsautoriteit.be/" target="_blank" rel="noopener">Gegevensbeschermingsautoriteit (GBA)</a>.
+  </p>
+</body>
+</html>

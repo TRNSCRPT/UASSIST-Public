@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UAssist Transcript — Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      max-width: 760px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+      color: #1e293b;
+      line-height: 1.65;
+    }
+    h1 { color: #004A80; margin-bottom: 6px; }
+    h2 { color: #0f172a; margin-top: 28px; font-size: 18px; }
+    .muted { color: #64748b; font-size: 14px; margin-bottom: 24px; }
+    code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+    a { color: #004A80; }
+  </style>
+</head>
+<body>
+  <h1>UAssist Transcript — Privacy Policy</h1>
+  <div class="muted">Last updated: November 2026 &middot; <a href="terms.html">Terms of Use</a> &middot; <a href="../privacy.html">Nederlands</a></div>
+
+  <p>
+    UAssist Transcript is an independent productivity tool designed to generate text transcripts (<code>.pdf</code>) from web videos, streams, and audio files.
+    We collect and process only the minimum data strictly required to deliver the transcription and credit features.
+  </p>
+
+  <h2>1. Data We Process</h2>
+  <ul>
+    <li><strong>Video Streams &amp; Titles:</strong> Detected locally in your browser solely when you play a supported video stream on a page and choose to transcribe it. The page URL, your login credentials, and your cookies are never sent to our servers.</li>
+    <li><strong>Local Storage &amp; Account ID:</strong> Language preference, settings, and an automatically generated anonymous account token are stored locally in <code>chrome.storage</code> on your device to keep track of your credit and active jobs. Generated <code>.pdf</code> transcripts include the short prefix of your Account ID (and your email address if voluntarily linked) as a visible and technical watermark to prevent unauthorized redistribution.</li>
+    <li><strong>Optional Email Address:</strong> If you voluntarily link an email address in the extension (via a one-time verification code), it is used solely so you can recover your credit on another device and receive notifications when your order or transcript is ready. You can unlink your email address at any time with one click in the extension.</li>
+    <li><strong>Payments &amp; Credit (via Mollie):</strong> When you top up credit or pay directly for a transcription, payment is processed via Mollie (<code>mollie.com</code>) and our backend API (<code>workers.dev</code>). We never collect or store credit card numbers or bank login credentials — only the amount, status, and payment reference.</li>
+    <li><strong>Fast Service (Cloud):</strong> Only when you select Fast Service does your browser fetch the audio pieces (or locally extract the audio track from a selected <code>.mp4</code> file) and send only the audio to our serverless transcription backend (<code>modal.run</code>, coordinated via <code>workers.dev</code>) solely to generate your transcript. Temporary audio pieces are deleted immediately as they are transcribed. The resulting transcript is kept for <strong>7 days</strong> so you can download your <code>.pdf</code> file (and can be deleted earlier by you at any time in the extension).</li>
+    <li><strong>In Browser (Local Mode):</strong> Audio from streams or user-selected files is decoded and transcribed locally inside your browser using WebAssembly without leaving your device. Model weights are fetched once from Hugging Face CDN and cached locally.</li>
+    <li><strong>Contact &amp; Support Form:</strong> If you voluntarily submit a support request inside the extension, your email address, optional order reference, and message are sent to our backend (<code>workers.dev</code>) solely to investigate and reply to your inquiry.</li>
+  </ul>
+
+  <h2>2. Processors &amp; Retention Periods</h2>
+  <ul>
+    <li><strong>Service Providers:</strong> To operate the service we use <strong>Cloudflare</strong> (API &amp; database), <strong>Modal</strong> (serverless GPU processing for Fast Service), <strong>Mollie</strong> (payment processing in the Netherlands/EU), and <strong>Hugging Face</strong> (local browser speech model download). Any transfers outside the EEA are protected under the EU-US Data Privacy Framework or European Commission Standard Contractual Clauses (SCCs).</li>
+    <li><strong>Retention:</strong> Temporary audio pieces in Fast Service are deleted immediately after transcription. Completed Cloud transcripts are automatically deleted after <strong>7 days</strong>. Inactive anonymous accounts without credit or a linked email address are deleted after 30 days. Payment and transaction references are kept for 10 years as required by Belgian tax and accounting law.</li>
+  </ul>
+
+  <h2>3. What We Do Not Do</h2>
+  <ul>
+    <li>We do <strong>not</strong> sell, rent, or trade user data to third parties.</li>
+    <li>We do <strong>not</strong> collect login credentials, cookies, browsing history, or advertising identifiers.</li>
+    <li>We do <strong>not</strong> use your audio or transcripts to train AI models or for targeted advertising.</li>
+  </ul>
+
+  <h2>4. Your GDPR Rights &amp; Contact</h2>
+  <p>
+    Under the GDPR, you have the right to access, rectify, erase, restrict, or port your data, as well as the right to object. You can delete your stored transcripts and unlink your email address at any time directly inside the extension under <strong>Account</strong>.
+  </p>
+  <p>
+    For privacy questions or to exercise your rights (please include your Account ID shown in the extension), email <a href="mailto:transcriptly.info@gmail.com">transcriptly.info@gmail.com</a>, use the contact form in the extension, or open an issue on <a href="https://github.com/TRNSCRPT/UASSIST-Public">github.com/TRNSCRPT/UASSIST-Public</a>. You also have the right to lodge a complaint with the Belgian <a href="https://www.dataprotectionauthority.be/" target="_blank" rel="noopener">Data Protection Authority (GBA/APD)</a>.
+  </p>
+</body>
+</html>
